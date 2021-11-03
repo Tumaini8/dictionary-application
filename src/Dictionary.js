@@ -9,7 +9,7 @@ export default function Dictionary() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`searching the meaning of the word ${word}`);
+
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleResponse);
   }
