@@ -1,14 +1,18 @@
 import "./App.css";
+import Dictionary from "./Dictionary.js";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <header className="App-header">
+          <Dictionary/>
+        </header>
+        <footer>
           <p>
-            Website code by Tumaini and it is an
+            Website code by Tumaini and it is an{" "}
             <a
-              className="App-link"
+              className="App-link text-success"
               href="https://reactjs.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -16,7 +20,7 @@ function App() {
               open-source
             </a>
           </p>
-        </header>
+        </footer>
       </div>
     </div>
   );
