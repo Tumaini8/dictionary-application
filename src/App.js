@@ -6,10 +6,8 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1>
-            Welcome to my Dictionary Application✨
-            </h1>
-          <Dictionary/>
+          <h1>✨✨✨✨✨✨✨✨✨✨✨✨✨✨</h1>
+          <Dictionary />
         </header>
         <footer>
           <p>
