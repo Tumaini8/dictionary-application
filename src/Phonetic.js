@@ -8,7 +8,7 @@ export default function Phonetic(props) {
         {" "}
         <h6>/{props.phonetic.text}/</h6>
         <span>
-        <a href="https://ssl.gstatic.com/dictionary/static/sounds/20200429/word--_gb_1.8.mp3">
+        <a href= {props.phonetic.audio} target= "_blank" rel="noreferrer">
           Listen
         </a>
       </span>

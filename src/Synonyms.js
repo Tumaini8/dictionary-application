@@ -1,4 +1,5 @@
 import React from "react";
+import "./Synonyms.css";
 
 export default function Synonyms(props) {
   
@@ -7,9 +8,11 @@ export default function Synonyms(props) {
     {props.synonyms.map(function(synonym, index){
       return(
         <ul key={index}>
+          <a href ="/" >
           <li>
             {synonym}
           </li>
+          </a>
         </ul>
       );
     })}

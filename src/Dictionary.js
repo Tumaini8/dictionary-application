@@ -4,14 +4,13 @@ import Outputs from "./Outputs.js";
 import "./Dictionary.css";
 
 export default function Dictionary() {
-  let [word, setWord] = useState(" ");
+  let [word, setWord] = useState("code");
   let [outputs, setOutputs] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
   }
   function handleChange(event) {
     event.preventDefault();
@@ -21,19 +20,32 @@ export default function Dictionary() {
     console.log(response.data);
     setOutputs(response.data[0]);
   }
-
-  return (
-    <div className="Dictionary">
-      <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="Search"
-          placeholder="Enter a word"
-          onChange={handleChange}
-        />
-      </form>
-      </section>
-      <Outputs outputs={outputs} />
-    </div>
-  );
+  function search() {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function Load(){
+    setLoaded(true);
+    search();
+  }
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="Search"
+              placeholder="Enter a word"
+              onChange={handleChange}
+              defaultValue="Code"
+            />
+          </form>
+        </section>
+        <Outputs outputs={outputs} />
+      </div>
+    );
+  } else {
+    Load();
+    return "Loading.....";
+  }
 }

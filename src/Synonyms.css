@@ -1,0 +1,20 @@
+.Synonyms li {
+  list-style: none;
+}
+.Synonyms ul {
+  display: inline-block;
+  font-size: 11px;
+  border: 1px solid cyan;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: white;
+}
+.Synonyms a {
+  text-decoration: none;
+}
+.Synonyms a:hover{
+    background: rgb(119, 119, 240);
+    color: black;
+    cursor: progress;
+}

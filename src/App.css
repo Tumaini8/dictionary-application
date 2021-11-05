@@ -1,9 +1,13 @@
-.App p{
+.App p {
   text-align: center;
   margin-top: 20px;
- 
 }
-.App{
+.App {
   margin: 100px;
   display: block;
+}
+h1 {
+  position: fixed;
+  top: 0;
+ 
 }
